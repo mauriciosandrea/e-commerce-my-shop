@@ -71,18 +71,29 @@ La función `login` simplemente toma el email y lo usa como nombre de usuario pa
 my-shop/
 ├─ public/
 ├─ src/
+
+
 │  ├─ components/
+
+
 │  │  └─ Navbar.jsx
 │  ├─ context/
+
+
 │  │  ├─ CartContext.jsx
 │  │  └─ AuthContext.jsx
 │  ├─ pages/
+
+
 │  │  ├─ Shop.jsx
 │  │  ├─ Cart.jsx
 │  │  ├─ Dashboard.jsx (Ruta Protegida)
 │  │  ├─ Login.jsx
 │  │  └─ Register.jsx
+
 │  ├─ App.jsx
 │  └─ main.jsx
+
+
 ├─ package.json
 └─ README.md
