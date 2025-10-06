@@ -8,7 +8,7 @@ import Cart from './pages/Cart';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import { useAuth } from './context/AuthContext'; // Importar el hook de autenticación
+import { useAuth } from './context/AuthContext'; 
 
 // Componente para proteger rutas (Private Route)
 const ProtectedRoute = ({ children }) => {
@@ -25,6 +25,26 @@ const ProtectedRoute = ({ children }) => {
 const App = () => {
   return (
     <>
+      {/* 🔮 1. CAPA DE FONDO: Agregamos el contenedor de estrellas fijo */}
+      <div className="star-background">
+        {/* 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟 12 elementos 'star' para mayor densidad 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟 */}
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        {/* ¡Las animaciones CSS se encargan del movimiento de cada uno! */}
+      </div>
+      {/* ----------------------------------------------------------- */}
+
+      {/* 2. CONTENIDO PRINCIPAL: Navbar y Rutas (Ahora flotan sobre el fondo) */}
       <Navbar />
       <main style={{ padding: '20px' }}>
         <Routes>
@@ -42,6 +62,7 @@ const App = () => {
               </ProtectedRoute>
             } 
           />
+          
           {/* Opcional: Ruta 404 */}
           <Route path="*" element={<h1>404 | Página no encontrada</h1>} />
         </Routes>
