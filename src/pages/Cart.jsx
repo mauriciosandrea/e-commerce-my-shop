@@ -113,7 +113,7 @@ const Cart = () => {
               onClick={clearCart}
               style={{ padding: '12px 20px', backgroundColor: '#e57373', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }} // Rojo suave para vaciar
             >
-              Vaciar Cesta
+              Vaciar carrito
             </button>
           </div>
         </>

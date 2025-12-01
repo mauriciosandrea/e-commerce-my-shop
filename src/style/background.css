@@ -1,0 +1,33 @@
+/* ✨ Fondo animado de estrellas para la app */
+
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #7a799a 0%, #05e42d 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* 🌟 Estrellas */
+.star {
+  position: absolute;
+  background: rgb(241, 235, 235);
+  border-radius: 50%;
+  box-shadow: 0 0 6px #fff, 0 0 10px #90ee90;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+/* Generar brillo aleatorio */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,41 @@
+/* ---------------------------------- */
+/* SERVICES PAGE STYLES (src/style/services.css) */
+/* ---------------------------------- */
+
+/* Definiciones de color basadas en tu tema de fondo oscuro y verde neón/manzana */
+:root {
+    --color-bg-app: #0f1a0f; /* Fondo muy oscuro, casi negro con toque verde */
+    --color-dev-accent: #e1ebe1; /* Verde manzana brillante (para títulos) */
+    --color-accent-light: #4CAF50; /* Verde más profundo */
+    --color-bg-dark: #1a331a; /* Fondo de tarjeta verde oscuro */
+}
+
+
+.services-page-container {
+    padding: 40px 20px;
+    background-color: var(--color-bg-app); 
+    min-height: calc(100vh - 80px);
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--color-dev-accent); 
+    text-shadow: 0 0 8px rgba(230, 235, 230, 0.6); /* Sombra neón verde */
+}
+
+/* Estilo de la cuadrícula para organizar las ServiceCard */
+.services-grid-full {
+    display: grid;
+    /* Diseño responsivo: mínimo 300px por columna */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Nota: Los estilos específicos de las tarjetas NO se definen aquí, 
+   ya que tu componente ServiceCard.jsx usa estilos en línea. */

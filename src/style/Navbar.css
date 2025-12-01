@@ -1,0 +1,111 @@
+/* ======================================= */
+/* 1. Estilos del Sidebar (Menú Hamburguesa) */
+/* ======================================= */
+
+.sidebar {
+    /* POSICIONAMIENTO CLAVE: Fijo y Z-index alto */
+    position: fixed;
+    top: 0;
+    /* Aseguramos la altura total de la ventana */
+    height: 100vh; 
+    left: -300px; /* Posición inicial: fuera de la pantalla */
+    width: 300px;
+    
+    /* Z-INDEX FORZADO: Debe ser más alto que cualquier otro elemento */
+    z-index: 999; 
+    
+    /* Estilos visuales */
+    padding: 20px;
+    /* La sombra es más prominente para destacarse */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.8);
+    
+    /* Transición con una duración ligeramente mayor para suavizar el deslizamiento */
+    transition: left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    
+    /* Habilitamos el scroll si hay muchas categorías */
+    overflow-y: auto;
+    
+    /* Aplicamos el fondo oscuro y texto claro por si los estilos inline fallan */
+    /* background-color: #0d281a; */
+    /* color: #e6ffe6; */
+}
+
+/* Estado 'open' para deslizar el menú a la vista */
+.sidebar.open {
+    left: 0; 
+}
+
+/* Título de la sección */
+.sidebar h3 {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    /* La línea divisoria usa el color de acento #90ee90 */
+    border-bottom: 2px solid #90ee90; 
+}
+
+/* Lista de categorías */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar li a {
+    color: #aaffaa; /* Tono de verde claro para los enlaces */
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sidebar li a:hover {
+    background-color: #2a2a2a; /* Fondo más oscuro al pasar el ratón */
+}
+
+/* ======================================= */
+/* 2. Estilos para el Navbar (Sobreescribe) */
+/* ======================================= */
+
+/* Estilos para el botón de hamburguesa (menu-toggle) */
+.menu-toggle {
+    transition: color 0.2s;
+}
+
+.menu-toggle:hover {
+    color: #ffcc00 !important; 
+}
+
+/* Estilo para el enlace Desarrollador/Admin (para destacarlo visualmente) */
+/* Se utiliza el selector de atributo para apuntar a los enlaces que van a /panel/ */
+.nav-links a[href*="/panel/"] {
+    color: #ffcc00 !important; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo al pasar el ratón por el enlace de rol */
+.nav-links a[href*="/panel/"]:hover {
+    text-decoration: underline;
+}
+/* Íconos sociales con efecto “neón giratorio” */
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    color: var(--color-accent-light);
+    font-size: 1.5rem;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.2) rotate(5deg);
+    text-shadow: 0 0 10px var(--color-accent-light), 0 0 20px var(--color-dev-accent);
+}

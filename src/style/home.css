@@ -1,0 +1,129 @@
+/* ---------------------------------- */
+/* HOME PAGE STYLES (src/style/home.css) */
+/* ---------------------------------- */
+
+/* Colores basados en index.css */
+/* Usamos CSS variables para consistencia */
+.home-container {
+    flex-grow: 1;
+    padding: 60px 20px;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-app);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px; /* Espacio entre secciones */
+    min-height: calc(100vh - 80px); /* Ajuste de altura para dejar espacio al Navbar */
+}
+
+/* --- SECCIÓN DE INTRODUCCIÓN (Parte superior) --- */
+.intro-section {
+    max-width: 800px;
+    text-align: center;
+    padding: 40px 0;
+    /* Efecto de fondo sutil si deseas añadirlo */
+    /* background: rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; */
+}
+
+.company-title {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--color-accent-light); /* Verde brillante para el título */
+    text-shadow: 0 0 10px rgba(144, 238, 144, 0.5); /* Brillo sutil */
+}
+
+.company-description {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.company-motto {
+    font-size: 1.4em;
+    font-style: italic;
+    margin-bottom: 35px;
+    color: #b3ffb3; /* Tono de verde intermedio */
+}
+
+/* --- BOTÓN PRINCIPAL DE ENTRADA --- */
+.enter-portal-button {
+    /* Estilo del botón */
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px; /* Botón redondeado tipo píldora */
+    
+    /* Colores */
+    background-color: var(--color-accent-light); /* Fondo verde de acento */
+    color: var(--color-bg-dark); /* Texto muy oscuro */
+    border: none;
+    
+    /* Efectos */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-accent-light);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.enter-portal-button:hover {
+    background-color: #79d279; /* Verde ligeramente más oscuro al pasar el ratón */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 20px #79d279;
+}
+
+/* --- SECCIÓN DE PREVISUALIZACIÓN DE SERVICIOS --- */
+.services-preview {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.services-preview h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--color-dev-accent); /* Amarillo/Dorado para la sección */
+    border-bottom: 3px solid var(--color-dev-accent);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #123012; /* Un verde más oscuro que el fondo de la app */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a402a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.service-card h3 {
+    color: var(--color-accent-light);
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.service-card i {
+    font-size: 2.5em;
+    color: var(--color-dev-accent); /* Iconos en color dorado */
+}
